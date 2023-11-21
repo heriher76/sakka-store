@@ -6,7 +6,7 @@
         <div class="container">
             <div class="d-flex flex-wrap position-relative">
                 <div class="position-static d-none d-xl-block">
-                    @include('frontend.partials.category_menu')
+                    {{-- @include('frontend.partials.category_menu') --}}
                 </div>
 
                 <!-- Sliders -->
@@ -101,7 +101,6 @@
                                 <div class="carousel-box  @if ($i == 0) border-left @endif">
                                     @foreach ($flash_deal_products as $key => $flash_deal_product)
                                         @if ($key >= $init && $key <= $end)
-                                            
                                             @if ($flash_deal_product->product != null && $flash_deal_product->product->published != 0)
                                                 @php
                                                     $product_url = route('product', $flash_deal_product->product->slug);
