@@ -9854,6 +9854,10 @@ ul.social [class*="linkedin"]:hover,
 ul.social.colored [class*="linkedin"] {
     background-color: #0070ac;
 }
+ul.social [class*="whatsapp"]:hover,
+ul.social.colored [class*="whatsapp"] {
+    background-color: #128c7e;
+}
 
 ul.colored-light [class*="facebook"] {
     background-color: #c2d9fd;
@@ -9869,6 +9873,9 @@ ul.colored-light [class*="youtube"] {
 }
 ul.colored-light [class*="instagram"] {
     background-color: #f7e2f3;
+}
+ul.colored-light [class*="whatsapp"] {
+    background-color: #25d366;
 }
 
 ul.colored-light [class*="facebook"]:hover {
