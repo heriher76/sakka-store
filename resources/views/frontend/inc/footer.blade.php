@@ -189,8 +189,8 @@
                                 <a href="{{ get_setting('shopee_link') }}" target="_blank" class="shopee"
                                     style="width: 36px; height: 36px; border-radius: 50%; background-color: #ffffff; justify-content: center; align-items: center;">
                                     <!-- Use inline SVG for Shopee icon -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="27"
-                                        height="27" viewBox="0 0 48 48">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30"
+                                        height="30" viewBox="0 0 48 68">
                                         <path fill="#f4511e"
                                             d="M36.683,43H11.317c-2.136,0-3.896-1.679-3.996-3.813l-1.272-27.14C6.022,11.477,6.477,11,7.048,11 h33.904c0.571,0,1.026,0.477,0.999,1.047l-1.272,27.14C40.579,41.321,38.819,43,36.683,43z">
                                         </path>
