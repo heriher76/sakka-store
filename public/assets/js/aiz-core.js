@@ -1935,12 +1935,27 @@ $.fn.toggleAttr = function (attr, attr1, attr2) {
             });
         },
         hovCategoryMenu: function(){
-            $("#category-menu-icon, #category-sidebar")
+            var menu = $("#click-category-menu");
+            menu.hide();
+            menu.removeClass('d-none');
+            $("#category-menu-icon, #category-sidebar, #category-menu-bar")
                 .on("mouseover", function (event) {
                     $("#hover-category-menu").addClass('active').removeClass('d-none');
+                    menu.show();
+                    if ($("#category-menu-bar-icon").hasClass('show')) {
+                        $("#category-menu-bar-icon").removeClass('show');
+                    }else{
+                        $("#category-menu-bar-icon").addClass('show');
+                    }
                 })
                 .on("mouseout", function (event) {
                     $("#hover-category-menu").addClass('d-none').removeClass('active');
+                    menu.hide();
+                    if ($("#category-menu-bar-icon").hasClass('show')) {
+                        $("#category-menu-bar-icon").removeClass('show');
+                    }else{
+                        $("#category-menu-bar-icon").addClass('show');
+                    }
                 });
         },
         clickCategoryMenu: function(){

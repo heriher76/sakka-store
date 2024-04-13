@@ -9,10 +9,12 @@
         <div class="position-relative top-banner removable-session z-1035 d-none" data-key="top-banner"
             data-value="removed">
             <a href="{{ get_setting('topbar_banner_link') }}" class="d-block text-reset">
-                <img src="{{ $topbar_banner_asset }}" class="d-none d-xl-block img-fit" alt="{{ translate('topbar_banner') }}">
+                <img src="{{ $topbar_banner_asset }}" class="d-none d-xl-block img-fit"
+                    alt="{{ translate('topbar_banner') }}">
                 <!-- For Large device -->
                 <img src="{{ $topbar_banner_medium != null ? uploaded_asset($topbar_banner_medium) : $topbar_banner_asset }}"
-                    class="d-none d-md-block d-xl-none img-fit" alt="{{ translate('topbar_banner') }}"> <!-- For Medium device -->
+                    class="d-none d-md-block d-xl-none img-fit" alt="{{ translate('topbar_banner') }}">
+                <!-- For Medium device -->
                 <img src="{{ $topbar_banner_small != null ? uploaded_asset($topbar_banner_small) : $topbar_banner_asset }}"
                     class="d-md-none img-fit" alt="{{ translate('topbar_banner') }}"> <!-- For Small device -->
             </a>
@@ -32,7 +34,7 @@
                         <!-- Language switcher -->
                         @if (get_setting('show_language_switcher') == 'on')
                             <li class="list-inline-item dropdown mr-4" id="lang-change">
-                                
+
                                 <a href="javascript:void(0)" class="dropdown-toggle text-secondary fs-12 py-2"
                                     data-toggle="dropdown" data-display="static">
                                     <span class="">{{ $system_language->name }}</span>
@@ -70,7 +72,8 @@
                                             <a class="dropdown-item @if ($system_currency->code == $currency->code) active @endif"
                                                 href="javascript:void(0)"
                                                 data-currency="{{ $currency->code }}">{{ $currency->name }}
-                                                ({{ $currency->symbol }})</a>
+                                                ({{ $currency->symbol }})
+                                            </a>
                                         </li>
                                     @endforeach
                                 </ul>
@@ -303,11 +306,12 @@
                                 <span
                                     class="size-40px rounded-circle overflow-hidden border border-transparent nav-user-img">
                                     @if ($user->avatar_original != null)
-                                        <img src="{{ $user_avatar }}"
-                                            class="img-fit h-100" alt="{{ translate('avatar') }}"
+                                        <img src="{{ $user_avatar }}" class="img-fit h-100"
+                                            alt="{{ translate('avatar') }}"
                                             onerror="this.onerror=null;this.src='{{ static_asset('assets/img/avatar-place.png') }}';">
                                     @else
-                                        <img src="{{ static_asset('assets/img/avatar-place.png') }}" class="image" alt="{{ translate('avatar') }}"
+                                        <img src="{{ static_asset('assets/img/avatar-place.png') }}" class="image"
+                                            alt="{{ translate('avatar') }}"
                                             onerror="this.onerror=null;this.src='{{ static_asset('assets/img/avatar-place.png') }}';">
                                     @endif
                                 </span>
@@ -611,7 +615,8 @@
                             <img src="{{ $user_avatar }}" class="img-fit h-100" alt="{{ translate('avatar') }}"
                                 onerror="this.onerror=null;this.src='{{ static_asset('assets/img/avatar-place.png') }}';">
                         @else
-                            <img src="{{ static_asset('assets/img/avatar-place.png') }}" class="image" alt="{{ translate('avatar') }}"
+                            <img src="{{ static_asset('assets/img/avatar-place.png') }}" class="image"
+                                alt="{{ translate('avatar') }}"
                                 onerror="this.onerror=null;this.src='{{ static_asset('assets/img/avatar-place.png') }}';">
                         @endif
                     </span>
